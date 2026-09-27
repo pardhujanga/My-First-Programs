@@ -1,0 +1,24 @@
+This a collections of my doubts and the answers in obtained to them over time.
+
+Timekeeping in Python:
+The time taken to complete process can be measured as an after process using the 'time' module.
+
+You can restrict while loops and for loops by embedding time counters inside them.
+A more generalized way(even for functions and things as such) would be to run multiple threads
+and asking the timekeeping thread to stop the original thread after a certain time has passed.
+This ensure any unseen closed loops in the original thread prevent the timer from being stopped.
+(If the program encounters a closed loop, it dosen' execute the other parts of the code after it.)
+
+Speed in python:
+Using dictionaries is faster than using lists in python.
+
+Dictionary comprehensions:
+These are of the form {k:v for (k,v) in SOME_ITERABLE}(This is like list comprehensions). In this 
+general case the iterable must have two different idices (joined ones like (1,2),(3,4) etc.). 
+To iterate over something like a list with single values v must be of the form func(k). If the list
+itself is made of iterables like tuples, strings etc. , then the general style can be used but 
+it might be of limited significance.
+
+Generators:
+They can be defined in the same way as list comprehensions using () instead of [].
+gen=(x**2 for x in range(1,11)) is a generator.
